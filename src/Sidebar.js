@@ -57,6 +57,37 @@ const styles = {
   logoImg: {
     width: '3rem', 
     paddingLeft: '0.4rem',
-  }
+  },
+  aNewNote: {
+    marginTop: '2rem',
+    position: 'relative',
+    width: '4rem',
+  },
+  button: {
+    backgroundColor: '#00ffffff',
+    border: '0',
+    color: '#008BF8',
+    curser: 'pointer',
+  },
+  aImg: {
+    position: 'absolute', 
+    left: '0',
+    width: "100%",
+    transition: 'opacity 0.25s ease-in-out',
+  },
+  aHoverImgOutline: {
+    opacity: '0',
+  },
+  signOut: {
+    position: 'absolute',
+    bottom: '1rem',
+  },
+  signOutButton: {
+    outline: 'none',
+  },
+  signOutButtonIFa: {
+    fontSize: '2rem',
+  },
+  
 }
 export default Sidebar
