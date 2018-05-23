@@ -1,22 +1,28 @@
 import React from 'react'
 
+import './NoteForm.css'
 
 const NoteForm = () => {
-    return (
-        <div className='NoteForm' style={styles.noteList}>
-          
-        </div>
-    )
-}
+  return (
+    <div className="NoteForm">
+      <div className="form-actions">
+        <button type="button">
+          <i className="far fa-trash-alt"></i>
+        </button>
+      </div>
+      <form>
+        <p>
+          <input
+            type="text"
+            name="title"
+            placeholder="Title your note"
+          />
+        </p>
 
-const styles = {
-    noteList: {
-        borderLeft: '.1 rem solid #eee',
-        borderRight: '.1 rem solid #eee',
-        width: '30rem',
-    },
-
-    
+        <textarea name="body"></textarea>
+      </form>
+    </div>
+  )
 }
 
 export default NoteForm
