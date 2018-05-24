@@ -45,4 +45,4 @@
 * Scope notes by user. let each user have their own array of notes (Try changing the _endpoint_ argument to `base.syncState()`)
 * 
 
-# Casino-
+
