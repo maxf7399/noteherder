@@ -29,3 +29,19 @@
 * Add the [re-base library] to your project 
 * sync your notes with firebase. 
 * Profit.
+
+
+
+##Day 8 Homework
+
+* add google authentication
+* actually get it to work
+
+##bonus credit
+
+* if you're signed in, it briefly shows the `signIn` component before showing `Main`. Fix that! Try storing `uid` in `localStorage`
+
+## super mega bonus credit
+* Scope notes by user. let each user have their own array of notes (Try changing the _endpoint_ argument to `base.syncState()`)
+* 
+
