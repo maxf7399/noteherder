@@ -26,4 +26,3 @@ const SignIn = ({ handleAuth }) => {
   )
 }
 export default SignIn
-© 2018 GitHub, Inc.
