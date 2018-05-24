@@ -74,7 +74,18 @@ class Main extends React.Component {
         )
     }
 }
+localStorage.setNote('items', JSON.stringify(this.notes));
+const data = JSON.parse(localStorage.getNote('notes'));
 
+data.forEach(item => {
+  this.notes.push
+});
+
+if (localStorage.getNote('notes')) {
+  this.notes = JSON.parse(localStorage.getNote('notes'));
+} else {
+  this.notes = [];
+}
 const style = {
     display: 'flex',
     height: '100vh',
