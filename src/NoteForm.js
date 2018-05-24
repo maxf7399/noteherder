@@ -21,7 +21,7 @@ const NoteForm = ({currentNote, saveNote, deleteNote}) =>{
         <div className="NoteForm">
           <div className="form-actions">
             <button type="button" onClick={handleDelete}>
-              <i className="fa fa-trash-alt"></i>
+              <i className="far fa-trash-alt"></i>
             </button>
           </div>
           <form>
