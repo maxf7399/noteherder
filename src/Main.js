@@ -73,7 +73,9 @@ class Main extends React.Component {
       currentNote: this.state.currentNote,
       saveNote: this.saveNote,
       removeCurrentNote: this.removeCurrentNote,
+      notes: this.state.notes,
     }
+
     return (
       <div className="Main" style={style}>
         <Sidebar
@@ -82,25 +84,25 @@ class Main extends React.Component {
         />
         <NoteList
           notes={this.state.notes}
-          setCurrentNote={this.setCurrentNote}
         />
+
         <Switch>
-        <Route 
-          path='/notes/:id'
-          render={navProps => (
-          <NoteForm
-            {...formProps}
-            {...navProps}
-        />
-          )}
+          <Route
+            path="/notes/:id"
+            render={navProps => (
+              <NoteForm
+                {...formProps}
+                {...navProps}
+              />
+            )}
           />
-          <Route 
-          render={navProps => (
-          <NoteForm
-            {...formProps}
-            {...navProps}
-        />
-          )}
+          <Route
+            render={navProps => (
+              <NoteForm
+                {...formProps}
+                {...navProps}
+              />
+            )}
           />
         </Switch>
       </div>
