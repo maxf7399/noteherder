@@ -34,6 +34,7 @@ class Main extends React.Component {
     let shouldRedirect = false
     const notes = [...this.state.notes]
     note.updatedAt = Date.now()
+    console.log(this.state.notes)
 
     if (!note.id) {
       // new note
