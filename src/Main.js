@@ -21,24 +21,17 @@ class Main extends React.Component {
       asArray: true,
     })
   }
-
-  blankNote = () => {
-    return {
-      id: null,
-      title: '',
-      body: '',
-      updatedAt: '',
-    }
-  }
   saveNote = (note) => {
     let shouldRedirect = false
-    let notes = [...this.state.notes]
+    const timestamp = Date.now()
+    note.updatedAt = timestamp
+    const notes = [...this.state.notes]
     note.updatedAt = Date.now()
     
 
     if (!note.id) {
       // new note
-      note.id = Date.now()
+      note.id = timestamp
       notes.push(note)
       shouldRedirect = true
     } else {
@@ -47,8 +40,9 @@ class Main extends React.Component {
       notes[i] = note
     }
 
-    notes = notes.sort(function(i,j){return j.updatedAt-i.updatedAt})
-    this.setState({ notes })
+    notes.sort((a,b) => {
+      return b.updatedAt-a.updatedAt})
+      this.setState({ notes })
 
     if (shouldRedirect) {
       this.props.history.push(`/notes/${note.id}`)

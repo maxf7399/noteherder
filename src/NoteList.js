@@ -4,6 +4,9 @@ import './NoteList.css'
 import Note from './Note'
 
 const NoteList = ({notes, setCurrentNote}) => {
+  
+
+
   return (
     <div className="NoteList">
       <h3>Notes</h3>
