@@ -21,13 +21,13 @@ class Main extends React.Component {
       asArray: true,
     })
   }
+
   saveNote = (note) => {
     let shouldRedirect = false
     const timestamp = Date.now()
     note.updatedAt = timestamp
+
     const notes = [...this.state.notes]
-    note.updatedAt = Date.now()
-    
 
     if (!note.id) {
       // new note
@@ -40,9 +40,11 @@ class Main extends React.Component {
       notes[i] = note
     }
 
-    notes.sort((a,b) => {
-      return b.updatedAt-a.updatedAt})
-      this.setState({ notes })
+    notes.sort((a, b) => {
+      return b.updatedAt - a.updatedAt
+    })
+
+    this.setState({ notes })
 
     if (shouldRedirect) {
       this.props.history.push(`/notes/${note.id}`)
@@ -51,8 +53,6 @@ class Main extends React.Component {
 
   removeNote = (currentNote) => {
     const notes = [...this.state.notes]
-    
-  
 
     const i = notes.findIndex(note => note.id === currentNote.id)
     if (i > -1) {
@@ -71,12 +71,8 @@ class Main extends React.Component {
 
     return (
       <div className="Main" style={style}>
-        <Sidebar
-          signOut={this.props.signOut}
-        />
-        <NoteList
-          notes={this.state.notes}
-        />
+        <Sidebar signOut={this.props.signOut} />
+        <NoteList notes={this.state.notes} />
 
         <Switch>
           <Route
